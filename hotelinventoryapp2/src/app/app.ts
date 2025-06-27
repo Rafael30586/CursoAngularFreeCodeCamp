@@ -1,9 +1,11 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { Rooms } from './rooms/rooms';
+
 
 @Component({
   selector: 'hinv-root', // el que viene por defecto es app-root, le he cambiado el nombre en el archivo angular.json y y en el index.html
-  imports: [RouterOutlet],
+  imports: [RouterOutlet,Rooms],
   templateUrl: './app.html',
   /*template: `<h1>Hello world from inline template</h1>
    <p>Angular is awesome</p>`,*/
