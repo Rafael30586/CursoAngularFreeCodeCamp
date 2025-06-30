@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { Room } from './rooms.interface';
+import { Room, RoomList } from './rooms.interface';
 import { CommonModule } from '@angular/common'; // Debe importarse para poder usar *ngIf en el html que le corresponde
 
 @Component({
@@ -20,6 +20,36 @@ export class Rooms {
     availableRooms: 10,
     bookedRooms: 5
   }
+
+  roomList : RoomList[] = [
+    {
+      roomNumber: 1,
+      roomType: 'Deluxe room',
+      amenities: 'Air conditioner, free wi-fi, TV, Bathroom, Kitchen',
+      price: 500,
+      photos: "https://media-cdn.tripadvisor.com/media/photo-s/16/1a/ea/54/hotel-presidente-4s.jpg",
+      checkinTime: new Date('11-nov-2021'),
+      checkoutTime: new Date('12-nov-2021')
+    },
+    {
+      roomNumber: 2,
+      roomType: 'Deluxe room',
+      amenities: 'Air conditioner, free wi-fi, TV, Bathroom, Kitchen',
+      price: 500,
+      photos: "https://media-cdn.tripadvisor.com/media/photo-s/16/1a/ea/54/hotel-presidente-4s.jpg",
+      checkinTime: new Date('11-nov-2021'),
+      checkoutTime: new Date('12-nov-2021')
+    },
+    {
+      roomNumber: 3,
+      roomType: 'Deluxe room',
+      amenities: 'Air conditioner, free wi-fi, TV, Bathroom, Kitchen',
+      price: 500,
+      photos: "https://media-cdn.tripadvisor.com/media/photo-s/16/1a/ea/54/hotel-presidente-4s.jpg",
+      checkinTime: new Date('11-nov-2021'),
+      checkoutTime: new Date('12-nov-2021')
+    }
+  ]
 
   numberOfRooms = 10
 
