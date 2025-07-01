@@ -8,4 +8,16 @@
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 
 <h1>Hello World</h1>
-<hinv-rooms></hinv-rooms>
+
+
+<div [ngSwitch]="role">
+    <div *ngSwitchCase="'User'">
+        Welcome user!
+    </div>
+    <div *ngSwitchCase="'Admin'">
+        <hinv-rooms></hinv-rooms>
+    </div>
+    <div *ngSwitchDefault>
+        You're not authorized to view this page
+    </div>
+</div>
