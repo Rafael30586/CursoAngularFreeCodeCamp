@@ -1,4 +1,4 @@
-<h1>Welcome to {{hotelName}}</h1>
+<h1 [ngStyle]="estilo">Welcome to {{hotelName}}</h1>
 
 <div [hidden]="hideRooms">
     Number of rooms:
@@ -18,7 +18,7 @@
             <th>Checkin time</th>
             <th>Checkout time</th>
         </tr>
-        <tr *ngFor="let room of roomList">
+        <tr [ngClass]="unaClase" *ngFor="let room of roomList">
             <td>{{ room.roomNumber}}</td>
             <td>{{room.roomType}}</td>
             <td>{{room.price}}</td>

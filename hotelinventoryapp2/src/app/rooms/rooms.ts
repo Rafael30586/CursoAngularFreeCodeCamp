@@ -15,6 +15,12 @@ export class Rooms {
 
   hideRooms = false
 
+  unaClase = "odd"
+
+  estilo = {
+    backgroundColor:"#d20d48"
+  }
+
   rooms: Room = {
     totalRooms: 20,
     availableRooms: 10,
