@@ -24,7 +24,7 @@
             <td>{{room.price}}</td>
             <td>{{room.amenities}}</td>
             <td>{{room.checkinTime}}</td>
-            <td>{{room.checkoutTime}}</td>
+            <td>{{room.checkoutTime | date:'medium'}}</td> <!-- Este es un pipe llanmado DatePipe que hace que la fecha se vea de otra forma, en este caso, en un formato más corto. Hay más formatos para elegir que pueden verse en la documentación oficial-->
         </tr>
     </table>
 </div>
