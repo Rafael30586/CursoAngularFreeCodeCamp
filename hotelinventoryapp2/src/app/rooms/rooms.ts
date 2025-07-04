@@ -35,7 +35,8 @@ export class Rooms {
       price: 500,
       photos: "https://media-cdn.tripadvisor.com/media/photo-s/16/1a/ea/54/hotel-presidente-4s.jpg",
       checkinTime: new Date('11-nov-2021'),
-      checkoutTime: new Date('12-nov-2021')
+      checkoutTime: new Date('12-nov-2021'),
+      rating: 4.57104
     },
     {
       roomNumber: 2,
@@ -44,7 +45,8 @@ export class Rooms {
       price: 500,
       photos: "https://media-cdn.tripadvisor.com/media/photo-s/16/1a/ea/54/hotel-presidente-4s.jpg",
       checkinTime: new Date('11-nov-2021'),
-      checkoutTime: new Date('12-nov-2021')
+      checkoutTime: new Date('12-nov-2021'),
+      rating: 5.06925
     },
     {
       roomNumber: 3,
@@ -53,7 +55,8 @@ export class Rooms {
       price: 500,
       photos: "https://media-cdn.tripadvisor.com/media/photo-s/16/1a/ea/54/hotel-presidente-4s.jpg",
       checkinTime: new Date('11-nov-2021'),
-      checkoutTime: new Date('12-nov-2021')
+      checkoutTime: new Date('12-nov-2021'),
+      rating:4.34592
     }
   ]
 
