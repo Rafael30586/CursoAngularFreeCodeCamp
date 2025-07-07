@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component , OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { Room, RoomList } from './rooms.interface';
 import { CommonModule } from '@angular/common'; // Debe importarse para poder usar *ngIf en el html que le corresponde
@@ -9,7 +9,7 @@ import { CommonModule } from '@angular/common'; // Debe importarse para poder us
   templateUrl: './rooms.html',
   styleUrl: './rooms.css'
 })
-export class Rooms {
+export class Rooms implements OnInit{
 
   hotelName = 'Hilton Hotel'
 
@@ -27,8 +27,12 @@ export class Rooms {
     bookedRooms: 5
   }
 
-  roomList : RoomList[] = [
-    {
+  roomList : RoomList[] = []
+  
+
+  ngOnInit(): void {
+    this.roomList = [
+      {
       roomNumber: 1,
       roomType: 'Deluxe room',
       amenities: 'Air conditioner, free wi-fi, TV, Bathroom, Kitchen',
@@ -58,7 +62,9 @@ export class Rooms {
       checkoutTime: new Date('12-nov-2021'),
       rating:4.34592
     }
-  ]
+
+    ]
+  }
 
   numberOfRooms = 10
 
