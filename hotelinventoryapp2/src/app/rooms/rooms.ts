@@ -1,11 +1,13 @@
 import { Component , OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { Room, RoomList } from './rooms.interface';
-import { CommonModule } from '@angular/common'; // Debe importarse para poder usar *ngIf en el html que le corresponde
+import { CommonModule } from '@angular/common';
+import { RoomsList } from "./rooms-list/rooms-list"; // Debe importarse para poder usar *ngIf en el html que le corresponde
+
 
 @Component({
   selector: 'hinv-rooms',
-  imports: [CommonModule],
+  imports: [CommonModule, RoomsList],
   templateUrl: './rooms.html',
   styleUrl: './rooms.css'
 })

@@ -1,0 +1,24 @@
+<p>rooms-list works!</p>
+
+Rooms List
+    <!--{{roomList | json}}-->
+    <table class="table">
+        <tr>
+            <th>Room number</th>
+            <th>Room type</th>
+            <th>Room price</th>
+            <th>Room amenities</th>
+            <th>Checkin time</th>
+            <th>Checkout time</th>
+            <th>Rating</th>
+        </tr>
+        <tr [ngClass]="unaClase" *ngFor="let room of rooms | slice : 0:3">
+            <td>{{room.roomNumber | percent}}</td>
+            <td>{{room.roomType | uppercase}}</td>
+            <td>{{room.price | currency : 'EUR'}}</td>
+            <td>{{room.amenities | titlecase}}</td>
+            <td>{{room.checkinTime | date}}</td>
+            <td>{{room.checkoutTime | date:'medium'}}</td> <!-- Este es un pipe llanmado DatePipe que hace que la fecha se vea de otra forma, en este caso, en un formato más corto. Hay más formatos para elegir que pueden verse en la documentación oficial-->
+            <td>{{room.rating | number : '1.1-1'}}</td>
+        </tr>
+    </table>
